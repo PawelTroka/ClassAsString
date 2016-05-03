@@ -66,6 +66,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="New Text Document.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="VSPackage\Resources\Command1.png" />
     <Content Include="VSPackage\Resources\VSPackage1.ico" />
     <VSCTCompile Include="VSPackage\ClassAsStringVSPackage.vsct">

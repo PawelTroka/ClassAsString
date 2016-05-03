@@ -5,7 +5,10 @@
     <DisplayName>Class As String</DisplayName>
     <Description xml:space="preserve">Class As String is an extension for Microsoft Visual Studio editor that enables user to quickly generate field containing class body (code of a class) as a string. It can be useful for scripting, diagnostics and information purposes.</Description>
     <MoreInfo>http://github.com/PawelTroka/ClassAsString</MoreInfo>
+    <License>https://raw.githubusercontent.com/PawelTroka/ClassAsString/master/LICENSE</License>
     <GettingStartedGuide>http://github.com/PawelTroka/ClassAsString</GettingStartedGuide>
+    <ReleaseNotes>https://github.com/PawelTroka/ClassAsString/releases</ReleaseNotes>
+    <Tags>class, tostring, class body, class body to string, field generation, c#, visual studio,convert class to string,class body to string,class to code,class body to code,introduce field with class body,generate field with class body,class body to field,class body to string,class as string,class body as string</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
