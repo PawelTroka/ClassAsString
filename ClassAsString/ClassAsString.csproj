@@ -56,19 +56,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextAdornments\ToCodeFieldAdornment.cs" />
     <Compile Include="TextAdornments\ToCodeFieldAdornmentTextViewCreationListener.cs" />
-    <Compile Include="VSPackages\ClassAsStringVSPackage.cs" />
+    <Compile Include="VSPackage\ClassAsStringVSPackage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Key.snk" />
     <None Include="packages.config" />
-    <None Include="VSPackages\source.extension.vsixmanifest">
+    <None Include="VSPackage\source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="VSPackages\Resources\Command1.png" />
-    <Content Include="VSPackages\Resources\VSPackage1.ico" />
-    <VSCTCompile Include="VSPackages\ClassAsStringVSPackage.vsct">
+    <Content Include="VSPackage\Resources\Command1.png" />
+    <Content Include="VSPackage\Resources\VSPackage1.ico" />
+    <VSCTCompile Include="VSPackage\ClassAsStringVSPackage.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
     </VSCTCompile>
   </ItemGroup>
@@ -193,7 +193,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="VSPackages\ClassAsStringVSPackage.resx">
+    <EmbeddedResource Include="VSPackage\ClassAsStringVSPackage.resx">
       <MergeWithCTO>true</MergeWithCTO>
       <ManifestResourceName>VSPackage</ManifestResourceName>
     </EmbeddedResource>
