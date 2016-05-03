@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.TextManager.Interop;
 
-namespace ConvertClassToString
+namespace ClassAsString.Model
 {
     internal class ClassBodyToStringConverter
     {

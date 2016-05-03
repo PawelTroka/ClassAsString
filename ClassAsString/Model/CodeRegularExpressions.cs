@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace ConvertClassToString
+namespace ClassAsString.Model
 {
     internal class CodeRegularExpressions
     {

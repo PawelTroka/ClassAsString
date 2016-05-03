@@ -1,21 +1,19 @@
 ﻿//------------------------------------------------------------------------------
-// <copyright file="Command1.cs" company="Company">
-//     Copyright (c) Company.  All rights reserved.
+// <copyright file="IntroduceFieldWithClassBodyCommand.cs" company="Pawel Troka">
+//     Copyright 2016 (c) Pawel Troka.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
 
 using System;
 using System.ComponentModel.Design;
-using System.Globalization;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop;
 
-namespace ConvertClassToString
+namespace ClassAsString.Commands
 {
     /// <summary>
     /// Command handler
     /// </summary>
-    internal sealed class Command1
+    internal sealed class IntroduceFieldWithClassBodyCommand
     {
         /// <summary>
         /// Command ID.
@@ -33,11 +31,11 @@ namespace ConvertClassToString
         private readonly Package package;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Command1"/> class.
+        /// Initializes a new instance of the <see cref="IntroduceFieldWithClassBodyCommand"/> class.
         /// Adds our command handlers for menu (commands must exist in the command table file)
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
-        private Command1(Package package)
+        private IntroduceFieldWithClassBodyCommand(Package package)
         {
             if (package == null)
             {
@@ -58,7 +56,7 @@ namespace ConvertClassToString
         /// <summary>
         /// Gets the instance of the command.
         /// </summary>
-        public static Command1 Instance
+        public static IntroduceFieldWithClassBodyCommand Instance
         {
             get;
             private set;
@@ -83,7 +81,7 @@ namespace ConvertClassToString
         /// <param name="package">Owner package, not null.</param>
         public static void Initialize(Package package)
         {
-            Instance = new Command1(package);
+            Instance = new IntroduceFieldWithClassBodyCommand(package);
         }
 
         /// <summary>

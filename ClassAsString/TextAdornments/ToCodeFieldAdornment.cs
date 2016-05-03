@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------------------------
-// <copyright file="TextAdornment1.cs" company="Company">
-//     Copyright (c) Company.  All rights reserved.
+// <copyright file="ToCodeFieldAdornment.cs" company="Pawel Troka">
+//     Copyright 2016 (c) Pawel Troka.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
 
@@ -8,16 +8,17 @@ using System;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
 using System.Windows.Media;
+using ClassAsString.Model;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Formatting;
 
-namespace ConvertClassToString
+namespace ClassAsString.TextAdornments
 {
     /// <summary>
     /// TextAdornment1 places red boxes behind all the "a"s in the editor window
     /// </summary>
-    internal sealed class TextAdornment1
+    internal sealed class ToCodeFieldAdornment
     {
         /// <summary>
         /// The layer of the adornment.
@@ -40,17 +41,17 @@ namespace ConvertClassToString
         private readonly Pen pen;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TextAdornment1"/> class.
+        /// Initializes a new instance of the <see cref="ToCodeFieldAdornment"/> class.
         /// </summary>
         /// <param name="view">Text view to create the adornment for</param>
-        public TextAdornment1(IWpfTextView view)
+        public ToCodeFieldAdornment(IWpfTextView view)
         {
             if (view == null)
             {
                 throw new ArgumentNullException("view");
             }
 
-            this.layer = view.GetAdornmentLayer("TextAdornment1");
+            this.layer = view.GetAdornmentLayer("ToCodeFieldAdornment");
 
             this.view = view;
             this.view.LayoutChanged += this.OnLayoutChanged;

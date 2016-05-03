@@ -1,6 +1,6 @@
 ﻿//------------------------------------------------------------------------------
-// <copyright file="TextAdornment1TextViewCreationListener.cs" company="Company">
-//     Copyright (c) Company.  All rights reserved.
+// <copyright file="ToCodeFieldAdornmentTextViewCreationListener.cs" company="Pawel Troka">
+//     Copyright 2016 (c) Pawel Troka.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------------
 
@@ -8,7 +8,7 @@ using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Utilities;
 
-namespace ConvertClassToString
+namespace ClassAsString.TextAdornments
 {
     /// <summary>
     /// Establishes an <see cref="IAdornmentLayer"/> to place the adornment on and exports the <see cref="IWpfTextViewCreationListener"/>
@@ -17,7 +17,7 @@ namespace ConvertClassToString
     [Export(typeof(IWpfTextViewCreationListener))]
     [ContentType("text")]
     [TextViewRole(PredefinedTextViewRoles.Document)]
-    internal sealed class TextAdornment1TextViewCreationListener : IWpfTextViewCreationListener
+    internal sealed class ToCodeFieldAdornmentTextViewCreationListener : IWpfTextViewCreationListener
     {
         // Disable "Field is never assigned to..." and "Field is never used" compiler's warnings. Justification: the field is used by MEF.
 #pragma warning disable 649, 169
@@ -27,7 +27,7 @@ namespace ConvertClassToString
         /// after the selection layer in the Z-order
         /// </summary>
         [Export(typeof(AdornmentLayerDefinition))]
-        [Name("TextAdornment1")]
+        [Name("ToCodeFieldAdornment")]
         [Order(After = PredefinedAdornmentLayers.Selection, Before = PredefinedAdornmentLayers.Text)]
         private AdornmentLayerDefinition editorAdornmentLayer;
 
@@ -43,7 +43,7 @@ namespace ConvertClassToString
         public void TextViewCreated(IWpfTextView textView)
         {
             // The adornment will listen to any event that changes the layout (text changes, scrolling, etc)
-            new TextAdornment1(textView);
+            new ToCodeFieldAdornment(textView);
         }
 
         #endregion
