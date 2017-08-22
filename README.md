@@ -6,5 +6,5 @@ First command introduced in stable v1.0.0 version of Class As String does exactl
 
 ![Introduce ToCode field containing class body as string](../master/docs/presentation/IntroduceToCode.gif "Introduce ToCode field containing class body as string")
 
-##License
+## License
 Class As String is licensed on The MIT License (MIT).
